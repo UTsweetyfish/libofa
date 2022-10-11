@@ -1,0 +1,239 @@
+libofa (0.9.3-21) unstable; urgency=medium
+
+  * QA upload.
+  * Remove duplicate symbols in the symbols file.
+  * Mark one more symbol as optional.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 22 Feb 2020 16:25:44 +0100
+
+libofa (0.9.3-20) unstable; urgency=medium
+
+  * QA upload.
+  * Set Debian QA Group as maintainer. (see #951277)
+  * Using new DH level format. Consequently:
+      - debian/compat: removed.
+      - debian/control: changed from 'debhelper' to 'debhelper-compat' in
+        Build-Depends field and bumped level to 12.
+  * debian/control:
+      - Added 'Rules-Requires-Root: no' to source stanza.
+      - Bumped Standards-Version to 4.5.0.
+  * debian/copyright: updated packaging copyright years.
+  * debian/salsa-ci.yml: added to provide CI tests for Salsa.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Thu, 13 Feb 2020 13:41:05 -0300
+
+libofa (0.9.3-19) unstable; urgency=medium
+
+  * debian/libofa0.symbols: added Build-Depends-Package field.
+  * debian/tests/control: removed an unneeded restriction.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Thu, 29 Nov 2018 09:19:04 -0200
+
+libofa (0.9.3-18) unstable; urgency=medium
+
+  * debian/tests/control: added needs-root as restriction
+    and '@' to Depends field to try to fix the test.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Sun, 14 Oct 2018 14:12:48 -0300
+
+libofa (0.9.3-17) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Tue, 02 Oct 2018 18:06:13 -0300
+
+libofa (0.9.3-16) experimental; urgency=medium
+
+  [ Joao Eriberto Mota Filho ]
+  * Migrated DH level to 11.
+  * debian/*.lintian-overrides: removed. Lintian had a false positive that was
+    fixed. Thanks!
+  * debian/control:
+      - Bumped Standards-Version to 4.2.1.
+      - Removed no longer needed build dependency dh-autoreconf.
+  * debian/copyright:
+      - Added rights for Ondřej Nový.
+      - Updated packaging copyright years.
+  * debian/rules: removed '--with autoreconf' because it is default since DH 10.
+  * debian/tests/*: added to perform a trivial test.
+
+  [ Ondřej Nový ]
+  * debian/copyright: Use https protocol in Format field.
+  * debian/control: Set Vcs-* to salsa.debian.org.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Mon, 01 Oct 2018 21:52:16 -0300
+
+libofa (0.9.3-15) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Sun, 15 Jan 2017 18:27:49 -0200
+
+libofa (0.9.3-14) experimental; urgency=medium
+
+  * debian/copyright: updated the packaging copyright years.
+  * debian/libofa0.symbols: demangled some symbols.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Sun, 15 Jan 2017 02:31:36 -0200
+
+libofa (0.9.3-13) unstable; urgency=medium
+
+  * Bumped DH level to 10.
+  * New upstream and upstream homepage.
+  * debian/control: bumped Standards-Version to 3.9.8.
+  * debian/libofa0.docs: removed README file.
+  * debian/libofa0.lintian-overrides: added to override a false positive.
+  * debian/libofa0-dev.docs: removed README file.
+  * debian/libofa0-dev.lintian-overrides: added to override a false positive.
+  * debian/rules: added the DEB_LDFLAGS_MAINT_APPEND variable to avoid an
+    unnecessary linking against a library.
+  * debian/watch: changed the fake watch to show "0.No-Release".
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Sat, 12 Nov 2016 17:32:32 -0200
+
+libofa (0.9.3-12) unstable; urgency=medium
+
+  * debian/control: fixed the Vcs-* fields.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Sat, 19 Mar 2016 10:55:20 -0300
+
+libofa (0.9.3-11) unstable; urgency=medium
+
+  * debian/control:
+      - Bumped Standards-Version to 3.9.7.
+      - Updated the Vcs-* fields to use https instead of http and git.
+  * debian/copyright: updated the packaging copyright years.
+  * debian/watch:
+      - Added a fake site to explain about the current status of the original
+        upstream homepage.
+      - Bumped to version 4.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Sun, 28 Feb 2016 20:19:30 -0300
+
+libofa (0.9.3-10) unstable; urgency=medium
+
+  * Fix symbols file to build on ppc64el in Ubuntu. Thanks to
+    Steve Langasek <steve.langasek@canonical.com>. (Closes: #797612)
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Mon, 31 Aug 2015 20:33:31 -0300
+
+libofa (0.9.3-9) unstable; urgency=medium
+
+  * Perfect! Upload to unstable.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Wed, 26 Aug 2015 20:30:27 -0300
+
+libofa (0.9.3-8) experimental; urgency=medium
+
+  * New maintainer. (Closes: #628474)
+  * Build system:
+      - Dropped CDBS.
+      - Using dh-autoreconf.
+      - Using Multi-Arch. (Closes: #777203)
+  * debian/control:
+      - Removed the ${shlibs:Depends} variable from Depends field in
+        libofa0-dev binary.
+      - Updated the long descriptions.
+      - Using Git as VCS.
+  * debian/copyright:
+      - Migrated to 1.0 format.
+      - Updated all information.
+  * debian/docs: renamed to libofa0-dev.docs and copied to libofa0.docs.
+  * debian/libofa0.symbols: created to provide symbols.
+  * debian/patches/:
+      - fix_ftbfs.diff: renamed to 07_fix_ftbfs.diff.
+      - fix-ftbfs-gcc4.7.diff: renamed to 08_fix-ftbfs-gcc4.7.diff.
+      - 07_libltdl.diff: renamed to 09_libltdl.diff.
+      - Added complete headers to 0[1-578]_*.diff patches.
+  * debian/rules: added an override to remove some files created when building.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Tue, 25 Aug 2015 16:10:21 -0300
+
+libofa (0.9.3-7) unstable; urgency=medium
+
+  * QA upload.
+  * Bumped Standards-Version to 3.9.6.
+  * Bumped DH level to 9.
+  * Fixed the debian/watch file.
+  * debian/copyright: fixed the symlink to GPL-2,
+    instead of GPL only.
+  * debian/rules: added the DEB_BUILD_MAINT_OPTIONS
+    variable to fix the issues pointed by blhc.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Sun, 12 Oct 2014 03:23:58 -0300
+
+libofa (0.9.3-6) unstable; urgency=medium
+
+  * QA upload.
+
+  [ Logan Rosen ]
+  * Use dh-autoreconf instead of autotools-dev to also fix FTBFS on ppc64el by
+    getting new libtool macros (still updates config.{sub,guess}).
+  * Use LTDL_INIT([convenience]) instead of AC_LIBLTDL_CONVENIENCE to fix
+    FTBFS while autoreconfing, and build-depend on libltdl-dev.
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 02 Aug 2014 16:12:13 +0100
+
+libofa (0.9.3-5) unstable; urgency=low
+
+  * QA upload.
+  * Fix build failure with GCC 4.7. Closes: #667250.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 17 Apr 2012 08:02:42 +0200
+
+libofa (0.9.3-4) unstable; urgency=low
+
+  * QA upload.
+  * The package has been orphaned, set the maintainer to Debian QA.
+  * Drop useless include of <curl/types.h> in the example. Closes: #637896.
+  * Stop shipping the la file. Closes: #633246.
+  * Convert to source format 3.0 (quilt).
+  * Bump debhelper compat level to 8.
+  * Bump Standards-Version to 3.9.2.
+  * Convert from simple-patchsys to quit, fixing patches to apply with -p1.
+
+ -- Regis Boudin <regis@debian.org>  Mon, 03 Oct 2011 19:32:51 +0100
+
+libofa (0.9.3-3.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix FTBFS with GCC 4.4, debian/patches/06_gcc44.diff added,
+    thanks to Martin Michlmayr (Closes: #504902)
+
+ -- David Paleino <dapal@debian.org>  Mon, 21 Dec 2009 16:08:36 +0100
+
+libofa (0.9.3-3) unstable; urgency=low
+
+  * Change policy version to 3.7.3.
+  * Replace homepage in the description with a Homepage field and
+    update the URL.
+  * Add Vcs-Bzr field.
+  * Replace obsolete ${Source-Version} with ${binary:Version}.
+  * Fix debian/watch. (Closes: #460008)
+  * Replace fftw3-dev by libfftw3-dev. (Closes: #448953)
+
+ -- Lukáš Lalinský <lalinsky@gmail.com>  Fri, 23 May 2008 16:42:56 +0200
+
+libofa (0.9.3-2.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * update 05_gcc43.diff, to fix g++-4.3 FTBFS thanks to Brian M. Carlson
+    (Closes: 441557).
+
+ -- Pierre Habouzit <madcoder@debian.org>  Sun, 16 Mar 2008 22:22:11 +0000
+
+libofa (0.9.3-2) unstable; urgency=low
+
+  * Removed -lexpat from libofa.pc. (Closes: #417389)
+    - patches/04_libofa.pc-deps.diff
+  * Fixed FTBFS with GCC 4.3, patch by Martin Michlmayr. (Closes: #417355)
+    - patches/05_gcc43.diff
+  * Fixed debian/watch -- musicdns.org was redesigned.
+
+ -- Lukáš Lalinský <lalinsky@gmail.com>  Sat, 19 May 2007 18:01:44 +0200
+
+libofa (0.9.3-1) unstable; urgency=low
+
+  * Initial release. (Closes: #370261)
+
+ -- Lukáš Lalinský <lalinsky@gmail.com>  Mon, 21 Aug 2006 23:06:01 +0200

@@ -1,0 +1,85 @@
+libofa.so.0 libofa0 #MINVER#
+* Build-Depends-Package: libofa0-dev
+ (c++)"core_print(Signal_op&, unsigned char*)@Base" 0.9.3
+ (c++)"pitch_print(Signal_op&, unsigned char*)@Base" 0.9.3
+ (c++)"preprocessing(short*, long, int, bool, Signal_op&)@Base" 0.9.3
+ (c++)"TrackData_op::getDuration()@Base" 0.9.3
+ (c++)"TrackData_op::linkTo(TrackData_op*)@Base" 0.9.3
+ (c++)"TrackData_op::getHead()@Base" 0.9.3
+ (c++)"TrackData_op::getTail()@Base" 0.9.3
+ (c++)"TrackData_op::TrackData_op(float, float, float, float)@Base" 0.9.3
+ (c++)"TrackData_op::TrackData_op()@Base" 0.9.3
+ (c++)"TrackData_op::TrackData_op(float, float, float, float)@Base" 0.9.3
+ (c++)"TrackData_op::TrackData_op()@Base" 0.9.3
+ (c++)"TrackData_op::~TrackData_op()@Base" 0.9.3
+ (c++)"TrackList_op::Add(TrackFrame_op*)@Base" 0.9.3
+ (c++)"TrackList_op::TrackList_op()@Base" 0.9.3
+ (c++)"TrackList_op::~TrackList_op()@Base" 0.9.3
+ (c++)"OnePrintError::OnePrintError(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)@Base" 0.9.3
+ (c++)"OnePrintError::~OnePrintError()@Base" 0.9.3
+ (c++)"TrackFrame_op::getTrackNearestFreq(float)@Base" 0.9.3
+ (c++)"TrackFrame_op::Add(TrackData_op*)@Base" 0.9.3
+ (c++)"TrackFrame_op::TrackFrame_op(float)@Base" 0.9.3
+ (c++)"TrackFrame_op::~TrackFrame_op()@Base" 0.9.3
+ (c++)"aflibConverter::initialize(double, int, double)@Base" 0.9.3
+ (c++)"aflibConverter::deleteMemory()@Base" 0.9.3
+ (c++)"aflibConverter::resampleFast(int&, int, short*, short*)@Base" 0.9.3
+ (c++)"aflibConverter::LARGE_FILTER_IMP@Base" 0.9.3
+ (c++)"aflibConverter::SMALL_FILTER_IMP@Base" 0.9.3
+ (c++)"aflibConverter::resampleWithFilter(int&, int, short*, short*, short*, short*, unsigned short, unsigned short, unsigned short)@Base" 0.9.3
+ (c++)"aflibConverter::SrcUD(short*, short*, double, unsigned int*, unsigned short&, unsigned short, unsigned short, unsigned short, short*, short*, bool)@Base" 0.9.3
+ (c++)"aflibConverter::SrcUp(short*, short*, double, unsigned int*, unsigned short&, unsigned short, unsigned short, unsigned short, short*, short*, bool)@Base" 0.9.3
+ (c++)"aflibConverter::err_ret(char*)@Base" 0.9.3
+ (c++)"aflibConverter::FilterUD(short*, short*, unsigned short, bool, short*, short, short, unsigned short)@Base" 0.9.3
+ (c++)"aflibConverter::FilterUp(short*, short*, unsigned short, bool, short*, short, short)@Base" 0.9.3
+ (c++)"aflibConverter::readData(int, short*, short**, int, int, bool)@Base" 0.9.3
+ (c++)"aflibConverter::resample(int&, int, short*, short*)@Base" 0.9.3
+ (c++)"aflibConverter::SrcLinear(short*, short*, double, unsigned int*, unsigned short&, unsigned short)@Base" 0.9.3
+ (c++)"aflibConverter::aflibConverter(bool, bool, bool)@Base" 0.9.3
+ (c++)"aflibConverter::~aflibConverter()@Base" 0.9.3
+ (c++)"FrameTracker_op::TrackPeaks()@Base" 0.9.3
+ (c++)"FrameTracker_op::GetBestMatch(float, TrackFrame_op*)@Base" 0.9.3
+ (c++)"FrameTracker_op::ContinuePeaks()@Base" 0.9.3
+ (c++)"FrameTracker_op::Compute(FFT_op&)@Base" 0.9.3
+ (c++)"FrameTracker_op::FindPeaks(FFT_op&, int, TrackFrame_op*)@Base" 0.9.3
+ (c++)"FrameTracker_op::~FrameTracker_op()@Base" 0.9.3
+ (optional|c++)TNT::Array1D<float>::Array1D(int)@Base 0.9.3
+ (c++)"TNT::Array2D<float>::~Array2D()@Base" 0.9.3
+ (optional|c++)"JAMA::SVD<float>::SVD(TNT::Array2D<float> const&)@Base" 0.9.3
+ (c++)"FFT_op::FreqToMidi(double)@Base" 0.9.3
+ (c++)"FFT_op::LoadSignal(Signal_op*)@Base" 0.9.3
+ (c++)"FFT_op::WindowInit()@Base" 0.9.3
+ (c++)"FFT_op::CreateBuffer(int, int, bool)@Base" 0.9.3
+ (c++)"FFT_op::ComputeWindow(double*)@Base" 0.9.3
+ (c++)"FFT_op::Compute(double)@Base" 0.9.3
+ (c++)"FFT_op::SetSize(int, bool)@Base" 0.9.3
+ (c++)"FFT_op::SetStep(int)@Base" 0.9.3
+ (c++)"FFT_op::ReSample(int, bool)@Base" 0.9.3
+ (c++)"FFT_op::FFT_op()@Base" 0.9.3
+ (c++)"FFT_op::~FFT_op()@Base" 0.9.3
+ (c++)"FFTLib_op::Initialize(int, bool)@Base" 0.9.3
+ (c++)"FFTLib_op::ComputeFrame(int, double*, double*)@Base" 0.9.3
+ (c++)"FFTLib_op::Destroy()@Base" 0.9.3
+ (c++)"FFTLib_op::SetSize(int, bool, double*, double*)@Base" 0.9.3
+ (c++)"Signal_op::PrepareMono(long, double)@Base" 0.9.3
+ (c++)"Signal_op::PrepareStereo(long, double)@Base" 0.9.3
+ (c++)"Signal_op::RemoveSilence(double, double)@Base" 0.9.3
+ (c++)"Signal_op::RemoveDCOffset()@Base" 0.9.3
+ (c++)"Signal_op::ConvertSampleRate(long)@Base" 0.9.3
+ (c++)"Signal_op::GetCrossCorrelation()@Base" 0.9.3
+ (c++)"Signal_op::Load(short*, long, int, bool)@Base" 0.9.3
+ (c++)"Signal_op::LPlusR()@Base" 0.9.3
+ (c++)"Signal_op::LMinusR()@Base" 0.9.3
+ (c++)"Signal_op::CutSignal(double, double)@Base" 0.9.3
+ (c++)"Signal_op::Normalize()@Base" 0.9.3
+ (c++)"Signal_op::Signal_op()@Base" 0.9.3
+ (c++)"Signal_op::~Signal_op()@Base" 0.9.3
+ (c++)"typeinfo for OnePrintError@Base" 0.9.3
+ (c++)"typeinfo name for OnePrintError@Base" 0.9.3
+ ofa_create_print@Base 0.9.3
+ ofa_get_version@Base 0.9.3
+ (optional|c++)"base64encode(char const*, int)@Base" 0.9.3
+ (optional|c++)"FrameTracker_op::FrameTracker_op(float, float, float, int)@Base" 0.9.3
+ (optional|c++)"TNT::Array1D<float>::Array1D(int)@Base" 0.9.3
+ (optional|c++)"TNT::Array2D<float>::initialize_(int, int)@Base" 0.9.3
+ (optional|c++)"TNT::Array2D<float>::Array2D(int, int)@Base" 0.9.3

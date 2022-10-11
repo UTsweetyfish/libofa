@@ -1,0 +1,14 @@
+Description: remove -lexpat from libofa.pc. (Closes: #417389)
+Author: Lukáš Lalinský <lalinsky@gmail.com>
+Last-Update: 2007-05-19
+Index: libofa-0.9.3/libofa.pc.in
+===================================================================
+--- libofa-0.9.3.orig/libofa.pc.in
++++ libofa-0.9.3/libofa.pc.in
+@@ -8,5 +8,5 @@ Description: The Open Fingerprint Archit
+ URL: http://www.musicdns.org/
+ Version: @VERSION@
+ Requires: fftw3
+-Libs: -L${libdir} -lofa -lexpat -lm
++Libs: -L${libdir} -lofa -lm
+ Cflags: -I${includedir}

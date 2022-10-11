@@ -1,0 +1,38 @@
+Source: libofa
+Priority: optional
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends: debhelper-compat (= 12),
+               libcurl4-openssl-dev,
+               libexpat1-dev,
+               libfftw3-dev,
+               libltdl-dev
+Standards-Version: 4.5.0
+Section: libs
+Rules-Requires-Root: no
+Homepage: https://github.com/tanob/libofa
+Vcs-Git: https://salsa.debian.org/debian/libofa.git
+Vcs-Browser: https://salsa.debian.org/debian/libofa
+
+Package: libofa0-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libfftw3-dev, libofa0 (= ${binary:Version}), ${misc:Depends}
+Description: library for acoustic fingerprinting (development files)
+ LibOFA (Library Open Fingerprint Architecture) is a library for
+ generating acoustic fingerprints that can be used to identify music
+ files using the MusicDNS service.
+ .
+ This package provides is the development files.
+
+Package: libofa0
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: library for acoustic fingerprinting
+ LibOFA (Library Open Fingerprint Architecture) is a library for
+ generating acoustic fingerprints that can be used to identify music
+ files using the MusicDNS service.
+ .
+ This package provides the runtime library.
